@@ -18,7 +18,7 @@ const routes = [
 
 for (let route of routes) {
     app.get(route.path, (req, res) => {
-        res.render(route.template);
+        res.render(route.template, { title: route.title });
     });
 }
 

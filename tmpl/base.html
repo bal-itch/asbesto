@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Dylan & Halen Martini">
     <link rel="stylesheet" href=/static/style/style.css>
+    <link rel="icon" href="/static/img/icon/favicon.ico">
     {% block meta %}{% endblock %}
     <title>
         {% if title %}{{ title }} | {% endif %}asbesto
     </title>
-    {% block head %}{% endblock %}
+    <!-- how to piss off vscode: part 1 -->
+    <style>
+        {% block pagestyle %}{% endblock %}
+    </style>
+    {% block headend %}{% endblock %}
 </head>
 <body>						
     {% block content %}{% endblock %}
