@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const nunjucks = require('nunjucks');
 const path = require('path');
@@ -26,6 +27,8 @@ app.use((req, res) => {
     res.status(404).render('404.html', { title: 'Page not found' });
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });

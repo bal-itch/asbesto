@@ -1,2 +1,2 @@
 # asbesto
-one of the websites of all time
+This is a site we made for random bullcrap.
