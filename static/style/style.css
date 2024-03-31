@@ -2,4 +2,9 @@ body {
     background-image: url("/static/img/misc/bg.png");
     color: white;
     font-family: Helvetica;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
 }
