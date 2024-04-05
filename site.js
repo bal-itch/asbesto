@@ -19,13 +19,13 @@ app.use('/static', express.static(path.join(__dirname, 'static')));
 app.use('/script', express.static(path.join(__dirname, 'script')));
 
 const routes = [
-    { path: '/', template: 'index.html' },
-    { path: '/wtv-jukebox', template: 'wtv-jukebox.html', title: 'WebTV Jukebox (for all bf0 users: leave)'}
+    { path: '/', template: 'index.html', data: { title: 'Home Page' } },
+    { path: '/wtv-jukebox', template: 'wtv-jukebox.html', data: { title: 'Welcome to WebTV Jukebox (for all bf0 users: leave)' } }
 ];
 
 for (let route of routes) {
     app.get(route.path, (req, res) => {
-        res.render(route.template, { title: route.title });
+        res.render(route.template, route.data);
     });
 }
 
