@@ -20,7 +20,7 @@ app.use('/script', express.static(path.join(__dirname, 'script')));
 
 const routes = [
     { path: '/', template: 'index.html', data: { title: 'Home Page' } },
-    { path: '/wtv-jukebox', template: 'wtv-jukebox.html', data: { title: 'Welcome to WebTV Jukebox (for all bf0 users: leave)' } }
+    { path: '/wtv-jukebox', template: 'wtv-jukebox.html', data: { title: 'WebTV Jukebox (for all bf0 users: leave)' } }
 ];
 
 for (let route of routes) {
