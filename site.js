@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const nunjucks = require('nunjucks');
 const path = require('path');
+const morgan = require('morgan');
 
 const app = express();
 
@@ -10,11 +11,16 @@ nunjucks.configure('tmpl', {
     express: app
 });
 
+if (process.env.LOGGING === 'true') {
+    app.use(morgan('combined'));
+}
+
 app.use('/static', express.static(path.join(__dirname, 'static')));
 app.use('/script', express.static(path.join(__dirname, 'script')));
 
 const routes = [
-    { path: '/', template: 'index.html' }
+    { path: '/', template: 'index.html' },
+    { path: '/wtv-jukebox', template: 'wtv-jukebox.html', title: 'WebTV Jukebox (for all bf0 users: leave)'}
 ];
 
 for (let route of routes) {

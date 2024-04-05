@@ -1,0 +1,364 @@
+<!-- None of these music files have been created by us, they have all been grabbed from various places around the internet -->
+{% extends 'base.html' %}
+
+{% block pagestyle %}
+    p, a {
+	    font-size: 14px;
+    }
+
+    .controltxt {
+        color: white;
+    }
+{% endblock %}
+{% block header %}
+    <!-- <img src="img/music_wa.gif">   these days have long since passed
+    bgcolor="000099" gradcolor="0400FF" -->
+    <table bgcolor="FF6CAB" gradcolor="7366FF" gradangle="0" id="top" border="3" width="100%">
+        <td align="center">
+            <br> <!-- real fucking elegant isn't it -->
+            <shadow>
+                <h2>WebTV Jukebox</h2>
+            </shadow>
+        </td>
+        <td align="center">
+            <shadow><b>
+                    <clock time ampm dayofweek month day abbreviated></clock>
+                </b></shadow>
+        </td>
+    </table>
+    <!-- <hr> -->
+    <!-- Determine client version to display appropriate audioscope -->
+    <NOSCRIPT>
+        <b>lmfao old client having ass</b>
+        <table border=3>
+            <td>
+                <audioscope border=3 leftoffset=4 rightoffset=-4 leftcolor=0400FF rightcolor=white bgcolor=black
+                    width=300 height=50>
+                    <audioscope border=3 gain=0 leftcolor=0400FF rightcolor=white bgcolor=black width=300 height=30>
+            </td>
+        </table>
+    </NOSCRIPT>
+    <script>
+        // This code kind of fucking sucks but it serves its purpose
+        let audioControls = "<table border bgcolor=3499FF gradcolor=3A3985 gradangle=0><td><input type=text name=time border=0></td><td><a class=controltxt href=javascript:ax('client:AudioPlay')>Play</a></td><td><a class=controltxt href=javascript:ax('client:AudioPause')>Pause</a></td><td><a class=controltxt href=javascript:ax('client:AudioStop')>Stop</a></td></table>";
+        let smallScope = "<table border=3><td><audioscope border=3 leftoffset=4 rightoffset=-4 leftcolor=0400FF rightcolor=white bgcolor=black width=300 height=50><audioscope border=3 gain=0 leftcolor=0400FF rightcolor=white bgcolor=black width=300 height=30></td></table>"; //2 audioscopes, standard type and a gain=0 audioscope
+        let bigScope = "<table border bgcolor=3499FF gradcolor=3A3985 gradangle=0><td><audioscope border=3 leftoffset=2 rightoffset=-2 leftcolor=0400FF rightcolor=white bgcolor=black height=65 width=160></td><td><audioscope border=3 gain=0 leftcolor=0400FF rightcolor=white bgcolor=black height=65 width=560></td><td><audioscope border=3 leftoffset=2 rightoffset=-2 rightcolor=white leftcolor=0400FF bgcolor=black height=65 width=160></td></table>"; //3 audioscopes, lags some clients and may shrink on 1.x so we relegate it to 2.x
+        if (navigator.appVersion.charAt("11") < 2) { // WebTV 1.x, can also be triggered by the value being -1 if there is nothing present at char 11 of appVersion
+            document.write(smallScope);
+            // DEBUG USE ONLY! document.write(smallScope + "<p>DEBUG: <font color=yellow><b>" + navigator.appVersion + "</b></font></p>");
+        }
+        else { // WebTV 2.x or newer
+            document.write(bigScope);
+            // DEBUG USE ONLY! document.write(bigScope + "<p>DEBUG: <font color=yellow><b>" + navigator.appVersion + "</b></font></p>");
+        }
+        document.write(audioControls); // this is only being done to make sure this appears on clients who have JS
+
+        function ax(a) { // hack to make unauthorized links open
+            document.open("text/url");
+            document.write(a);
+            document.close();
+        }
+    </script>
+    <br>
+    <br>
+{% endblock %}
+
+{% block content %}
+        <!-- TODO: actually properly template this -->
+        <table bgcolor="251A40" gradcolor="1D1336" gradangle="0" id="top" border="5" width="95%">
+            <td align="center">
+                <shadow>
+                    <h2>MIDI</h2>
+                </shadow>
+                <!-- <a href="static/audio/midi/">artist, title</a> -->
+                <!-- ================ A ================ -->
+                <a href="static/audio/midi/dancingqueen.mid">ABBA - Dancing Queen (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/mother.mid">ABBA - Does Your Mother Know (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/ABBA%20-%20Knowing%20Me%2C%20Knowing%20You.kar">ABBA - Knowing Me, Knowing You
+                    (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/ABBA%20-%20Lay%20All%20Your%20Love%20On%20Me.kar">ABBA - Lay All Your Love On Me
+                    (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/moneyx3.mid">ABBA - Money, Money, Money (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/winner.mid">ABBA - The Winner Takes It All (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/sos.mid">ABBA - S.O.S. (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/ABBA%20-%20Super%20Trouper.kar">ABBA - Super Trouper (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/waterloo.mid">ABBA - Waterloo (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/Dream_On.mid">Aerosmith - Dream On (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/navioconn.mid">AOL TV - Connecting(?)</a>
+                <br>
+                <!-- ================ B ================ -->
+                <a href="static/audio/midi/Bee%20Gees%20-%20Stayin%20Alive.mid">Bee Gees - Stayin' Alive (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/Big_Shot.mid">Billy Joel - Big Shot</a>
+                <br>
+                <a href="static/audio/midi/Billy_JoelJoel_Billy_My_Life.mid">Billy Joel - My Life (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/pianoman.mid">Billy Joel - Piano Man (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/BOSTON.More%20than%20a%20feeling.MID">Boston - More Than a Feeling</a>
+                <br>
+                <!-- ================ C ================ -->
+                <a href="static/audio/midi/C418_-_Haggstrom.mid">C418 - Haggstrom</a>
+                <br>
+                <!-- ================ D ================ -->
+                <a href="static/audio/midi/Lets_Go_Away-Intermediate_Track.mid">Daytona USA - Let's Go Away</a>
+                <br>
+                <a href="static/audio/midi/DAYTONA.MID">Daytona USA - Sky High</a>
+                <br>
+                <a href="static/audio/midi/Daytona_USA_-_The_King_of_Speed.mid">Daytona USA - The King of Speed</a>
+                <br>
+                <a href="static/audio/midi/starmankaraoke.mid">David Bowie - Starman (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/Smoke%20On%20The%20Water.mid">Deep Purple - Smoke On The Water (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/justcantgetenough.mid">Depeche Mode - Just Can't Get Enough (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/DOOM2_ENTRYWAY_LEVEL1_.MID">Doom II - Running From Evil</a>
+                <br>
+                <!-- ================ E ================ -->
+                <a href="static/audio/midi/september.mid">Earth Wind & Fire - September (Karaoke)</a>
+                <br>
+                <!-- ================ G ================ -->
+                <a href="static/audio/midi/chase.mid">Giorgio Moroder - The Chase</a>
+                <br>
+                <a href="static/audio/midi/GAYNOR.I%20will%20survive%20K.mid">Gloria Gaynor - I Will Survive (Karaoke)</a>
+                <br>
+                <!-- ================ H ================ -->
+                <a href="static/audio/midi/Huey_Lewis__The_News_Power_Of_Love.mid">Huey Lewis & the News - The Power of Love
+                    (Karaoke)</a>
+                <br>
+                <!-- ================ J ================ -->
+                <a href="static/audio/midi/jamiroquaicanned_heat.mid">Jamiroquai - Canned Heat (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/VirtualInsanity.mid">Jamiroquai - Virtual Insanity (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/Journey%20-%20Any%20Way%20You%20Want%20It.kar">Journey - Any Way You Want It
+                    (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/Journey%20-%20Dont%20Stop%20Believin.kar">Journey - Don't Stop Believin'
+                    (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/Wheel%20In%20The%20Sky%20%28Karaoke%29.mid">Journey - Wheel In The Sky (Karaoke)</a>
+                <br>
+                <!-- ================ K ================ -->
+                <a href="static/audio/midi/LYDSPOR.MID">K-CD October 98 - LYDSPOR</a>
+                <br>
+                <!-- ================ L ================ -->
+                <a href="static/audio/midi/Ramble%20On.mid">Led Zeppelin - Ramble On</a>
+                <br>
+                <!-- ================ M ================ -->
+                <a href="static/audio/midi/Down%20Under%20%28Karaoke%29.mid">Men At Work - Down Under (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/Metallica_Orion.mid">Metallica - Orion</a>
+                <br>
+                <a href="static/audio/midi/HOUSROKR.mid">Michael Walthius - Houserocker</a>
+                <br>
+                <a href="static/audio/midi/nds-mkds-gcnluigicircuit-gcnyoshicircuit.mid">MKDS - GCN Luigi Circuit/Yoshi
+                    Circuit</a>
+                <br>
+                <a href="static/audio/midi/mkds_gba_skygarden.mid">MKDS - GBA Sky Garden</a>
+                <br>
+                <a href="static/audio/midi/nds-mkds-titlescreen.mid">MKDS - Title Screen</a>
+                <br>
+                <a href="static/audio/midi/mkds_waluigipinball2.mid">MKDS - Waluigi Pinball</a>
+                <br>
+                <a href="static/audio/midi/RainbowRoadSC.mid">MKSC - Rainbow Road</a>
+                <br>
+                <!-- ================ P ================ -->
+                <a href="static/audio/midi/silly_love_song1-C124.mid">Paul McCartney - Silly Love Songs (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/PHIL_COLLINS_-_In_the_air_tonight.mid">Phil Collins - In the Air Tonight</a>
+                <br>
+                <!-- ================ Q ================ -->
+                <a href="static/audio/midi/Queen%20-%20Bohemian%20Rhapsody.mid">Queen - Bohemian Rhapsody</a>
+                <br>
+                <!-- ================ R ================ -->
+                <a href="static/audio/midi/Never%20Gonna%20Give%20You%20Up%20%28Karaoke%29.mid">Rick Astley - Never Gonna Give
+                    You Up
+                    (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/RickAstley_Together_Forever.mid">Rick Astley - Together Forever</a>
+                <br>
+                <!-- ================ S ================ -->
+                <a href="static/audio/midi/Wind_of_Change.mid">Scorpions - Wind of Change (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/JBIOS-Demo.mid">SEGA Master System - JP BIOS</a>
+                <br>
+                <a href="static/audio/midi/Rock%20n%27%20me.mid">Steve Miller Band - Rock'n Me (Karaoke)</a>
+                <!-- jar stop stealing my stolen midis you bitch -->
+                <br>
+                <a
+                    href="static/audio/midi/Game_System__Super_Nintendo_SimCity_VillageSequenced_by__John_Engelmann__engell69gtenet_.mid">SimCity
+                    (SNES) - Village</a>
+                <br>
+                <a href="static/audio/midi/Simple_Minds_-_Dont_you_forget_about_me.mid">Simple Minds - Don't You Forget About
+                    Me
+                    (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/allstar.mid?wtv-title=hehe%20shrek">Smash Mouth - All Star</a>
+                <br>
+                <a href="static/audio/midi/imabeliever.mid?wtv-title=hehe%20shrek">Smash Mouth - I'm a Believer</a>
+                <br>
+                <a href="static/audio/midi/Skrillex-ScaryMonstersAndNiceSprites.mid?wtv-title=much%20obliged">Skrillex - Scary
+                    Monsters
+                    & Nice Sprites</a>
+                <br>
+                <a href="static/audio/midi/son1star.mid">Sonic 1 - Starlight Zone</a>
+                <br>
+                <a href="static/audio/midi/S&Ksky.mid">Sonic & Knuckles - Sky Sanctuary Zone</a>
+                <br>
+                <a href="static/audio/midi/Styx%20-%20Too%20Much%20Time%20On%20My%20Hands%20%5BMet%20Tekst%5D.mid">Styx - Too
+                    Much Time
+                    On My Hands (Karaoke)</a>
+                <br>
+                <!-- ================ T ================ -->
+                <a href="static/audio/midi/EverybodyWantsToRuleTheWorld.mid">Tears For Fears - Everybody Wants To Rule The
+                    World</a>
+                <br>
+                <a href="static/audio/midi/A_Hard_Days_Night.mid">The Beatles - A Hard Day's Night</a>
+                <br>
+                <a href="static/audio/midi/Birthday.mid">The Beatles - Birthday (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/doyouwannaknowasecret.mid">The Beatles - Do You Wanna Know a Secret (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/HELP.MID">The Beatles - Help!</a>
+                <br>
+                <a href="static/audio/midi/I%20Should%20Have%20Known%20Better.mid">The Beatles - I Should Have Known Better</a>
+                <br>
+                <a href="static/audio/midi/paperback.mid">The Beatles - Paperback Writer (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/Don%27t%20Stand%20So%20Close%20To%20Me%201%20%28Karaoke%29.mid">The Police - Don't
+                    Stand So
+                    Close To Me (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/Video_Killed_The_Radio_Star_K.mid">The Buggles - Video Killed the Radio Star
+                    (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/THE%20ROLLING%20STONES.I%20can%27t%20get%20no%20satisfaction%20K.mid">The Rolling
+                    Stones -
+                    (I Can't Get No) Satisfaction (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/BabaORiley.mid">The Who - Baba O'Riley (Karaoke)</a>
+                <br>
+                <a href="static/audio/midi/TotoRosanna.mid">Toto - Rosanna (Karaoke)</a>
+                <br>
+                <!-- ================ V ================ -->
+                <a href="static/audio/midi/Van%20Halen%20-%20Dance%20the%20Night%20Away.mid">Van Halen - Dance the Night
+                    Away</a>
+                <br>
+                <!-- ================ W ================ -->
+                <a href="static/audio/midi/JWTVDemo.mid">WebTV - Japanese Demo</a>
+                <br>
+                <a href="static/audio/midi/karTV.mid">WebTV - KarTV (Alt. mix)</a>
+                <br>
+                <a href="static/audio/midi/CSSAMP1.MID">Windows/Canon - CSSAMP1</a>
+                <br>
+                <a href="static/audio/midi/fnkngrvn.mid">Windows - fnkngrvn</a>
+                <br>
+                <a href="static/audio/midi/jazz1.mid">Windows - Jazz 1</a>
+                <br>
+                <a href="static/audio/midi/MPCMID.MID">Windows - MPCMID</a>
+                <br>
+                <a href="static/audio/midi/sunflowerdaisy.mid">Windows - Sunflower Daisy</a>
+                <br>
+                <a href="static/audio/midi/MUSIC1.mid">Windows (Hover 95) - Music 1</a>
+                <br>
+                <a href="static/audio/midi/MUSIC2.mid">Windows (Hover 95) - Music 2</a>
+                <br>
+                <a href="static/audio/midi/MUSIC3.mid">Windows (Hover 95) - Music 3</a>
+                <br>
+                <!-- ================ Y ================ -->
+                <a href="static/audio/midi/Roundabout.mid">Yes - Roundabout (Karaoke)</a>
+                <br><br>
+            </td>
+        </table>
+        <p>
+            <!-- <shadow>
+            <h2>IT</h2>
+        </shadow>
+        <a href="static/audio/it/surasshu_-_eek.it">eek</a>
+        <br> -->
+        <table bgcolor="251A40" gradcolor="1D1336" gradangle="0" id="top" border="5" width="95%">
+            <td align="center">
+                <shadow>
+                    <h2>MOD <b>
+                            <font color="red">*</font>
+                        </b></h2>
+                </shadow>
+                <!-- <a href="static/audio/mod">song title</a> -->
+                <a href="static/audio/mod/electric%20dust.mod">Marc - Electric Dust</a>
+                <br>
+                <a href="static/audio/mod/natural%20spirit.mod">Marc - Natural Spirit</a>
+                <br>
+                <a href="static/audio/mod/ALLISTER%20BRIMBLE%20-%20Project%20X%20(Title)%20Bladswede%20Remix.mod">Project X
+                    (Amiga) -
+                    Main Theme</a>
+                <br>
+                <a href="static/audio/mod/DIGITALLUSIONS-SNOW%20(1994).MOD">Silent, Soft & Slow</a>
+                <br>
+                <a href="static/audio/mod/surplus.mod">surplus</a>
+                <br>
+                <a href="static/audio/mod/supermar.mod">Super Mario Land</a>
+                <br>
+                <a href="static/audio/mod/toytitle.mod">Toy Story (Sega Genesis) - toytitle</a>
+                <br><br>
+            </td>
+        </table>
+        <p>
+        <table bgcolor="251A40" gradcolor="1D1336" gradangle="0" id="top" border="5" width="95%">
+            <td align="center">
+                <shadow>
+                    <h2>S3M <b>
+                            <font color="red">*</font>
+                        </b></h2>
+                </shadow>
+                <!-- <a href="static/audio/s3m">song title</a> -->
+                <a href="static/audio/s3m/hip_-_640k_of_space.s3m">640k Of Space</a>
+                <br>
+                <a href="static/audio/s3m/aryx.s3m">aryx</a>
+                <br><br>
+            </td>
+        </table>
+        <p>
+        <table bgcolor="251A40" gradcolor="1D1336" gradangle="0" id="top" border="5" width="95%">
+            <td align="center">
+                <shadow>
+                    <h2>XM</h2>
+                </shadow>
+                <a href="static/audio/xm/ball_99.xm">BALLBLAZER '99</a>
+                <br>
+                <a href="static/audio/xm/drq-holo.xm">Hologram</a>
+                <br>
+                <a href="static/audio/xm/sommartider.xm">Sommartider</a>
+                <br>
+                <a href="static/audio/xm/balrog_-_spice.xm">Spice</a>
+                <br><br>
+            </td>
+        </table>
+        <p>
+            <small>
+                <p><i>~ crafted with love by the halen wants this midi committee ~</i></p>
+            </small>
+        <h1><u><a href="#top">back to top</a></u></h1>
+        <table bgcolor="#690000" border> <!-- nice -->
+            <tr>
+                <td align="center">
+                    <shadow><small><b><i>For the best experience with tracker music, use real WebTV hardware. The WebTV
+                                    Viewer does not play <u>most</u> tracker music, Old Classic (bf0) will only play tracker
+                                    music (no bigger than about 350kb) & karaoke on 1.x builds, & other WebTV units will
+                                    not support karaoke past firmware 2.5.5</i></b>
+                        </small></shadow>
+                </td>
+            </tr>
+        </table>
+{% endblock %}

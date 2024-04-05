@@ -15,7 +15,9 @@
     </style>
     {% block headend %}{% endblock %}
 </head>
-<body>						
+<body>
+    {% block header %}{% endblock %}
+    <hr>						
     {% block content %}{% endblock %}
 
     {% include "footer.html" %}

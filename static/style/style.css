@@ -5,6 +5,46 @@ body {
     text-align: center;
 }
 
-p {
-    font-size: 20px;
+h1 {
+	font-size: 31px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+li, p, a {
+	font-size: 16.5px;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+}
+
+a:link {
+	color: dodgerblue
+}
+
+a:visited {
+	color: violet;	
+}
+
+a:hover {
+	color: skyblue;
+}
+
+a:active {
+	color: blue;
 }
