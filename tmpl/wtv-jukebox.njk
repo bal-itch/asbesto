@@ -1,0 +1,154 @@
+<!-- None of these music files have been created by us, they have all been grabbed from various places around the internet -->
+{% extends 'base.njk' %}
+
+{% block pagestyle %}
+    p, a {
+	    font-size: 14px;
+    }
+
+    .controltxt {
+        color: white;
+    }
+{% endblock %}
+{% block header %}
+    {#- <img src="img/music_wa.gif"> #}
+    <table bgcolor="FF6CAB" gradcolor="7366FF" gradangle="0" id="top" border="3" width="100%">
+        <td align="center">
+            <br> <!-- real fucking elegant isn't it -->
+            <shadow>
+                <h2>WebTV Jukebox</h2>
+            </shadow>
+        </td>
+        <td align="center">
+            <shadow><b>
+                    <clock time ampm dayofweek month day abbreviated></clock> {#- WebTV-proprietary way of displaying time #}
+                </b></shadow>
+        </td>
+    </table>
+    <!-- Determine client version to display appropriate audioscope -->
+    <NOSCRIPT>
+        <b>lmfao old client having ass</b>
+        <table border=3>
+            <td>
+                <audioscope border=3 leftoffset=4 rightoffset=-4 leftcolor=0400FF rightcolor=white bgcolor=black
+                    width=300 height=50>
+                    <audioscope border=3 gain=0 leftcolor=0400FF rightcolor=white bgcolor=black width=300 height=30>
+            </td>
+        </table>
+    </NOSCRIPT>
+    <script>
+        // This code kind of fucking sucks but it serves its purpose
+        let audioControls = "<table border bgcolor=3499FF gradcolor=3A3985 gradangle=0><td><input type=text name=time border=0></td><td><a class=controltxt href=javascript:ax('client:AudioPlay')>Play</a></td><td><a class=controltxt href=javascript:ax('client:AudioPause')>Pause</a></td><td><a class=controltxt href=javascript:ax('client:AudioStop')>Stop</a></td></table>";
+        let smallScope = "<table border=3><td><audioscope border=3 leftoffset=4 rightoffset=-4 leftcolor=0400FF rightcolor=white bgcolor=black width=300 height=50><audioscope border=3 gain=0 leftcolor=0400FF rightcolor=white bgcolor=black width=300 height=30></td></table>"; //2 audioscopes, standard type and a gain=0 audioscope
+        let bigScope = "<table border bgcolor=3499FF gradcolor=3A3985 gradangle=0><td><audioscope border=3 leftoffset=2 rightoffset=-2 leftcolor=0400FF rightcolor=white bgcolor=black height=65 width=160></td><td><audioscope border=3 gain=0 leftcolor=0400FF rightcolor=white bgcolor=black height=65 width=560></td><td><audioscope border=3 leftoffset=2 rightoffset=-2 rightcolor=white leftcolor=0400FF bgcolor=black height=65 width=160></td></table>"; //3 audioscopes, lags some clients and may shrink on 1.x so we relegate it to 2.x
+        if (navigator.appVersion.charAt("11") < 2) { // WebTV 1.x, can also be triggered by the value being -1 if there is nothing present at char 11 of appVersion
+            document.write(smallScope);
+            // DEBUG USE ONLY! document.write(smallScope + "<p>DEBUG: <font color=yellow><b>" + navigator.appVersion + "</b></font></p>");
+        }
+        else { // WebTV 2.x or newer
+            document.write(bigScope);
+            // DEBUG USE ONLY! document.write(bigScope + "<p>DEBUG: <font color=yellow><b>" + navigator.appVersion + "</b></font></p>");
+        }
+        document.write(audioControls); // this is only being done to make sure this appears on clients who have JS
+
+        function ax(a) { // hack to make unauthorized links open
+            document.open("text/url");
+            document.write(a);
+            document.close();
+        }
+    </script>
+    <br>
+    <br>
+{% endblock %}
+
+{% block content %}
+        {#- TODO: template the rest #}
+        <table bgcolor="251A40" gradcolor="1D1336" gradangle="0" id="top" border="5" width="95%">
+            <td align="center">
+                <shadow>
+                    <h2>MIDI</h2>
+                </shadow>
+                {{ midiContent }}
+                <br><br>
+            </td>
+        </table>
+        <p>
+            <!-- <shadow>
+            <h2>IT</h2>
+        </shadow>
+        <a href="static/audio/it/surasshu_-_eek.it">eek</a>
+        <br> -->
+        <table bgcolor="251A40" gradcolor="1D1336" gradangle="0" id="top" border="5" width="95%">
+            <td align="center">
+                <shadow>
+                    <h2>MOD <b>
+                            <font color="red">*</font>
+                        </b></h2>
+                </shadow>
+                <!-- <a href="static/audio/mod">song title</a> -->
+                <a href="static/audio/mod/electric%20dust.mod">Marc - Electric Dust</a>
+                <br>
+                <a href="static/audio/mod/natural%20spirit.mod">Marc - Natural Spirit</a>
+                <br>
+                <a href="static/audio/mod/ALLISTER%20BRIMBLE%20-%20Project%20X%20(Title)%20Bladswede%20Remix.mod">Project X
+                    (Amiga) -
+                    Main Theme</a>
+                <br>
+                <a href="static/audio/mod/DIGITALLUSIONS-SNOW%20(1994).MOD">Silent, Soft & Slow</a>
+                <br>
+                <a href="static/audio/mod/surplus.mod">surplus</a>
+                <br>
+                <a href="static/audio/mod/supermar.mod">Super Mario Land</a>
+                <br>
+                <a href="static/audio/mod/toytitle.mod">Toy Story (Sega Genesis) - toytitle</a>
+                <br><br>
+            </td>
+        </table>
+        <p>
+        <table bgcolor="251A40" gradcolor="1D1336" gradangle="0" id="top" border="5" width="95%">
+            <td align="center">
+                <shadow>
+                    <h2>S3M <b>
+                            <font color="red">*</font>
+                        </b></h2>
+                </shadow>
+                <!-- <a href="static/audio/s3m">song title</a> -->
+                <a href="static/audio/s3m/hip_-_640k_of_space.s3m">640k Of Space</a>
+                <br>
+                <a href="static/audio/s3m/aryx.s3m">aryx</a>
+                <br><br>
+            </td>
+        </table>
+        <p>
+        <table bgcolor="251A40" gradcolor="1D1336" gradangle="0" id="top" border="5" width="95%">
+            <td align="center">
+                <shadow>
+                    <h2>XM</h2>
+                </shadow>
+                <a href="static/audio/xm/ball_99.xm">BALLBLAZER '99</a>
+                <br>
+                <a href="static/audio/xm/drq-holo.xm">Hologram</a>
+                <br>
+                <a href="static/audio/xm/sommartider.xm">Sommartider</a>
+                <br>
+                <a href="static/audio/xm/balrog_-_spice.xm">Spice</a>
+                <br><br>
+            </td>
+        </table>
+        <p>
+            <small>
+                <p><i>~ crafted with love by the halen wants this midi committee ~</i></p>
+            </small>
+        <h1><u><a href="#top">back to top</a></u></h1>
+        <table bgcolor="#690000" border> <!-- nice -->
+            <tr>
+                <td align="center">
+                    <shadow><small><b><i>For the best experience with tracker music, use real WebTV hardware. The WebTV
+                                    Viewer does not play <u>most</u> tracker music, Old Classic (bf0) will only play tracker
+                                    music (no bigger than about 350kb) & karaoke on 1.x builds, & other WebTV units will
+                                    not support karaoke past firmware 2.5.5</i></b>
+                        </small></shadow>
+                </td>
+            </tr>
+        </table>
+{% endblock %}
