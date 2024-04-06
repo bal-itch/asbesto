@@ -34,13 +34,8 @@ function doMusicTmpl() {
 }
 
 const routes = [
-<<<<<<< Updated upstream
-    { path: '/', template: 'index.html', data: { title: 'Home Page' } },
-    { path: '/wtv-jukebox', template: 'wtv-jukebox.html', data: { title: 'WebTV Jukebox (for all bf0 users: leave)' } }
-=======
     { path: '/', template: 'index.njk', data: { title: 'Home Page' } },
     { path: '/wtv-jukebox', template: 'wtv-jukebox.njk', data: { title: 'WebTV Jukebox (for all bf0 users: leave)', midiContent: doMusicTmpl() } }
->>>>>>> Stashed changes
 ];
 
 for (let route of routes) {
