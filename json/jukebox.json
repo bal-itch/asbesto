@@ -65,8 +65,18 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/aicrooster.mid",
+        "title": "Alice In Chains - Rooster",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/navioconn.mid",
         "title": "AOL TV - Connecting(?)",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/bbsabomix.mid",
+        "title": "Beastie Boys - Sabatoge",
         "format": "midi"
     },
     {
@@ -95,6 +105,21 @@
     {
         "path": "static/audio/midi/We-Didnt-Start-The-Fire.mid",
         "title": "Billy Joel - We Didn't Start The Fire",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/bilidolwhitewed.mid",
+        "title": "Billy Idol - White Wedding",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/bsironman.mid",
+        "title": "Black Sabbath - Iron Man",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/bsparan.mid",
+        "title": "Black Sabbath - Paranoid",
         "format": "midi"
     },
     {
@@ -213,8 +238,18 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/kfreakonaleash.mid",
+        "title": "Korn - Freak On A Leash",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/Ramble%20On.mid",
         "title": "Led Zeppelin - Ramble On",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/mdethsod.mid",
+        "title": "Megadeth - Symphony Of Destruction",
         "format": "midi"
     },
     {
@@ -224,8 +259,38 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/mfdb.mid",
+        "title": "Metallica - Fade To Black",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/Metallica_Orion.mid",
         "title": "Metallica - Orion",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/mone.mid",
+        "title": "Metallica - One",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/mridelight.mid",
+        "title": "Metallica - Ride The Lightning",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/munforgiven.mid",
+        "title": "Metallica - The Unforgiven",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/msanatarium.mid",
+        "title": "Metallica - Welcome Home (Sanatarium)",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/mroam.mid",
+        "title": "Metallica - Wherever I May Roam",
         "format": "midi"
     },
     {
@@ -259,9 +324,19 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/ocrazytrain.mid",
+        "title": "Ozzy Osbourne - Crazy Train",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/silly_love_song1-C124.mid",
         "title": "Paul McCartney - Silly Love Songs",
         "hasKar": true,
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/pjjeremy.mid",
+        "title": "Pearl Jam - Jeremy",
         "format": "midi"
     },
     {
@@ -275,6 +350,16 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/rhcreep.mid",
+        "title": "Radiohead - Creep",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/ratmkilling.mid",
+        "title": "Rage Against The Machine - Killing In The Name",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/Never%20Gonna%20Give%20You%20Up%20%28Karaoke%29.mid",
         "title": "Rick Astley - Never Gonna Give You Up",
         "hasKar": true,
@@ -283,11 +368,6 @@
     {
         "path": "static/audio/midi/RickAstley_Together_Forever.mid",
         "title": "Rick Astley - Together Forever",
-        "format": "midi"
-    },
-    {
-        "path": "static/audio/midi/limelight.mid",
-        "title": "Rush - Limelight",
         "format": "midi"
     },
     {
@@ -305,6 +385,11 @@
         "path": "static/audio/midi/Rock%20n%27%20me.mid",
         "title": "Steve Miller Band - Rock'n Me",
         "hasKar": true,
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/flylikeaneagle.mid",
+        "title": "Steve Miller Band - Fly Like an Eagle",
         "format": "midi"
     },
     {
@@ -351,6 +436,18 @@
     {
         "path": "static/audio/midi/We-Built-This-City-1.mid",
         "title": "Starship - We Built This City",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/styxsail.mid",
+        "title": "Styx - Come Sail Away",
+        "hasKar": true,
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/styxfool.mid",
+        "title": "Styx - Fooling Yourself",
+        "hasKar": true,
         "format": "midi"
     },
     {
@@ -419,6 +516,11 @@
         "path": "static/audio/midi/BabaORiley.mid",
         "title": "The Who - Baba O'Riley",
         "hasKar": true,
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/thewhopinwizard.mid",
+        "title": "The Who - Pinball Wizard",
         "format": "midi"
     },
     {
