@@ -20,22 +20,24 @@ app.use('/static', express.static(path.join(__dirname, 'static')));
 app.use('/script', express.static(path.join(__dirname, 'script')));
 
 // Belongs to jukebox
-function doMusicTmpl() {
-    const jsonPath = JSON.parse(fs.readFileSync("./tmpl/midi.json", { encoding: "utf8", flag: "r" }));
+function doMusicTmpl(format) {
+    const jsonPath = JSON.parse(fs.readFileSync("./json/jukebox.json", { encoding: "utf8", flag: "r" }));
     let yeah = "";
-
+    // this is fucking terrifying but it's the only way i can think of to get this to work properly right now
     jsonPath.forEach((details, index) => {
-        yeah += `<a href="${details.path}">${details.title}`;
-        if (details.hasKar) yeah += " (Karaoke)";
-        yeah += `</a>\n<br>`;
-        if (index + 1 !== Object.keys(jsonPath).length) yeah += `\n`; // Make sure we don't newline at the end
+        if (details.format === format) {
+            yeah += `<a href="${details.path}">${details.title}`;
+            if (details.hasKar) yeah += " (Karaoke)";
+            yeah += `</a>\n<br>`;
+            if (index + 1 !== Object.keys(jsonPath).length) yeah += `\n`; // Make sure we don't newline at the end
+        }
     });
     return (yeah);
 }
 
 const routes = [
     { path: '/', template: 'index.njk', data: { title: 'Home Page' } },
-    { path: '/wtv-jukebox', template: 'wtv-jukebox.njk', data: { title: 'WebTV Jukebox (for all bf0 users: leave)', midiContent: doMusicTmpl() } }
+    { path: '/wtv-jukebox', template: 'wtv-jukebox.njk', data: { title: 'WebTV Jukebox (for all bf0 users: leave)', midiContent: doMusicTmpl('midi'), modContent: doMusicTmpl('mod'), s3mContent: doMusicTmpl('s3m'), xmContent: doMusicTmpl('xm') } }
 ];
 
 for (let route of routes) {
