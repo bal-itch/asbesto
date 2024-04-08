@@ -1,15 +1,5 @@
 <!-- None of these music files have been created by us, they have all been grabbed from various places around the internet -->
-{% extends 'base.njk' %}
-
-{% block pagestyle %}
-    p, a {
-	    font-size: 14px;
-    }
-
-    .controltxt {
-        color: white;
-    }
-{% endblock %}
+{% extends 'base-nocss.njk' %}
 {% block header %}
     {#- <img src="img/music_wa.gif"> #}
     <table bgcolor="FF6CAB" gradcolor="7366FF" gradangle="0" id="top" border="3" width="100%">
@@ -38,7 +28,7 @@
     </NOSCRIPT>
     <script>
         // This code kind of fucking sucks but it serves its purpose
-        let audioControls = "<table border bgcolor=3499FF gradcolor=3A3985 gradangle=0><td><input type=text name=time border=0></td><td><a class=controltxt href=javascript:ax('client:AudioPlay')>Play</a></td><td><a class=controltxt href=javascript:ax('client:AudioPause')>Pause</a></td><td><a class=controltxt href=javascript:ax('client:AudioStop')>Stop</a></td></table>";
+        let audioControls = "<table border bgcolor=42275a gradcolor=734b6d gradangle=0><td><a href=javascript:ax('client:AudioPlay')>Play</a></td><td><a href=javascript:ax('client:AudioPause')>Pause</a></td><td><a href=javascript:ax('client:AudioStop')>Stop</a></td></table>";
         let smallScope = "<table border=3><td><audioscope border=3 leftoffset=4 rightoffset=-4 leftcolor=0400FF rightcolor=white bgcolor=black width=300 height=50><audioscope border=3 gain=0 leftcolor=0400FF rightcolor=white bgcolor=black width=300 height=30></td></table>"; //2 audioscopes, standard type and a gain=0 audioscope
         let bigScope = "<table border bgcolor=3499FF gradcolor=3A3985 gradangle=0><td><audioscope border=3 leftoffset=2 rightoffset=-2 leftcolor=0400FF rightcolor=white bgcolor=black height=65 width=160></td><td><audioscope border=3 gain=0 leftcolor=0400FF rightcolor=white bgcolor=black height=65 width=560></td><td><audioscope border=3 leftoffset=2 rightoffset=-2 rightcolor=white leftcolor=0400FF bgcolor=black height=65 width=160></td></table>"; //3 audioscopes, lags some clients and may shrink on 1.x so we relegate it to 2.x
         if (navigator.appVersion.charAt("11") < 2) { // WebTV 1.x, can also be triggered by the value being -1 if there is nothing present at char 11 of appVersion

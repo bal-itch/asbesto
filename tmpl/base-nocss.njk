@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Dylan & Halen Martini">
+    <link rel="icon" href="/static/img/icon/favicon.ico">
+    {% block meta %}{% endblock %}
+    <title>
+        {% if title %}{{ title }} | {% endif %}asbesto
+    </title>
+    <!-- how to piss off vscode: part 1 -->
+    <style>
+        {% block pagestyle %}{% endblock %}
+    </style>
+    {% block headend %}{% endblock %}
+</head>
+<body background="/static/img/misc/bg.png" text="white" link="#1e90ff">
+<center>
+    {% block header %}{% endblock %}
+    <hr>						
+    {% block content %}{% endblock %}
+    {% include "footer.njk" %}
+</center>
+</body>
+</html>
