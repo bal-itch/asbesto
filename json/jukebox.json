@@ -54,6 +54,16 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/ACDCForThoseAboutToRock.mid",
+        "title": "AC/DC - For Those About To Rock",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/ACDCHighwayToHell.mid",
+        "title": "AC/DC - Highway To Hell",
+        "format":  "midi"
+    },
+    {
         "path": "static/audio/midi/YouShookMeAllNightLong.mid",
         "title": "AC/DC - You Shook Me All Night Long",
         "format": "midi"
@@ -65,8 +75,28 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/dam_that_river.mid",
+        "title": "Alice In Chains - Dam That River",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/man_in_the_box.mid",
+        "title": "Alice In Chains - Man In The Box",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/aicrooster.mid",
         "title": "Alice In Chains - Rooster",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/ThemBones.mid",
+        "title": "Alice In Chains - Them Bones",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/we_die_young.mid",
+        "title": "Alice In Chains - We Die Young",
         "format": "midi"
     },
     {
@@ -113,13 +143,13 @@
         "format": "midi"
     },
     {
-        "path": "static/audio/midi/bsironman.mid",
-        "title": "Black Sabbath - Iron Man",
+        "path": "static/audio/midi/bsparan.mid",
+        "title": "Black Sabbath - Paranoid",
         "format": "midi"
     },
     {
-        "path": "static/audio/midi/bsparan.mid",
-        "title": "Black Sabbath - Paranoid",
+        "path": "static/audio/midi/turnthepage.mid",
+        "title": "Bob Seger - Turn The Page",
         "format": "midi"
     },
     {
@@ -227,6 +257,16 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/faithfully.mid",
+        "title": "Journey - Faithfully",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/sepways.mid",
+        "title": "Journey - Separate Ways (Worlds Apart)",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/Wheel%20In%20The%20Sky%20%28Karaoke%29.mid",
         "title": "Journey - Wheel In The Sky",
         "hasKar": true,
@@ -248,6 +288,11 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/freebird.mid",
+        "title": "Lynyrd Skynyrd - Free Bird",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/mdethsod.mid",
         "title": "Megadeth - Symphony Of Destruction",
         "format": "midi"
@@ -264,6 +309,11 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/mfuel.mid",
+        "title": "Metallica - Fuel",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/Metallica_Orion.mid",
         "title": "Metallica - Orion",
         "format": "midi"
@@ -274,8 +324,13 @@
         "format": "midi"
     },
     {
-        "path": "static/audio/midi/mridelight.mid",
-        "title": "Metallica - Ride The Lightning",
+        "path": "static/audio/midi/mktulu.mid",
+        "title": "Metallica - The Call Of Ktulu",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/the_memory_remains.mid",
+        "title": "Metallica - The Memory Remains",
         "format": "midi"
     },
     {
@@ -284,13 +339,9 @@
         "format": "midi"
     },
     {
-        "path": "static/audio/midi/msanatarium.mid",
-        "title": "Metallica - Welcome Home (Sanatarium)",
-        "format": "midi"
-    },
-    {
-        "path": "static/audio/midi/mroam.mid",
-        "title": "Metallica - Wherever I May Roam",
+        "path": "static/audio/midi/mtrappedunderice.mid",
+        "title": "Metallica - Trapped Under Ice",
+        "hasKar": true,
         "format": "midi"
     },
     {
@@ -324,14 +375,24 @@
         "format": "midi"
     },
     {
-        "path": "static/audio/midi/ocrazytrain.mid",
-        "title": "Ozzy Osbourne - Crazy Train",
+        "path": "static/audio/midi/nvlithium.mid",
+        "title": "Nirvana - Lithium",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/cowboysfromhell.mid",
+        "title": "Pantera - Cowboys From Hell",
         "format": "midi"
     },
     {
         "path": "static/audio/midi/silly_love_song1-C124.mid",
         "title": "Paul McCartney - Silly Love Songs",
         "hasKar": true,
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/alive.mid",
+        "title": "Pearl Jam - Alive",
         "format": "midi"
     },
     {
@@ -355,6 +416,16 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/bombtrack.mid",
+        "title": "Rage Against The Machine - Bombtrack",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/bullsonparade.mid",
+        "title": "Rage Against The Machine - Bulls On Parade",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/ratmkilling.mid",
         "title": "Rage Against The Machine - Killing In The Name",
         "format": "midi"
@@ -371,6 +442,32 @@
         "format": "midi"
     },
     {
+        "path": "static/audio/midi/limelight.mid",
+        "title": "Rush - Limelight",
+        "hasKar": true,
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/barchtta.mid",
+        "title": "Rush - Red Barchetta",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/Camera_Eye.mid",
+        "title": "Rush - The Camera Eye",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/sawyer.mid",
+        "title": "Rush - Tom Sawyer",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/yyz.mid",
+        "title": "Rush - YYZ",
+        "format": "midi"
+    },
+    {
         "path": "static/audio/midi/Wind_of_Change.mid",
         "title": "Scorpions - Wind of Change",
         "hasKar": true,
@@ -379,6 +476,16 @@
     {
         "path": "static/audio/midi/JBIOS-Demo.mid",
         "title": "SEGA Master System - JP BIOS",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/black_hole_sun.mid",
+        "title": "Soundgarden - Black Hole Sun",
+        "format": "midi"
+    },
+    {
+        "path": "static/audio/midi/spoonman.mid",
+        "title": "Soundgarden - Spoonman",
         "format": "midi"
     },
     {
@@ -611,6 +718,11 @@
         "title": "Yes - Roundabout",
         "hasKar": true,
         "format": "midi"
+    },
+    {
+        "path": "static/audio/mod/donut.mod",
+        "title": "Donut",
+        "format": "mod"
     },
     {
         "path": "static/audio/mod/electric%20dust.mod",
