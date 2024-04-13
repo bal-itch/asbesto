@@ -26,8 +26,8 @@ function doMusicTmpl(format) {
     // this is fucking terrifying but it's the only way i can think of to get this to work properly right now
     jsonPath.forEach((details, index) => {
         if (details.format === format) {
-            yeah += `<a href="${details.path}">${details.title}`;
-            if (details.hasKar) yeah += " (Karaoke)";
+            yeah += `<a href="static/audio/${format}/${details.path}">${details.title}`;
+            if (details.hasKar || details.path.includes(".kar")) yeah += " (Karaoke)"; // Defining hasKar for .kar files is no longer required
             yeah += `</a>\n<br>`;
             if (index + 1 !== Object.keys(jsonPath).length) yeah += `\n`; // Make sure we don't newline at the end
         }
