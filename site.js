@@ -22,15 +22,15 @@ app.use('/script', express.static(path.join(__dirname, 'script')));
 // Belongs to jukebox
 function doMusicTmpl(format) {
     const jsonPath = JSON.parse(fs.readFileSync("./json/jukebox.json", { encoding: "utf8", flag: "r" }));
+    const theShit = jsonPath[format];
+    if (process.env.LOGGING === 'true') console.log(theShit);
     let yeah = "";
     // this is fucking terrifying but it's the only way i can think of to get this to work properly right now
-    jsonPath.forEach((details, index) => {
-        if (details.format === format) {
-            yeah += `<a href="static/audio/${format}/${details.path}">${details.title}`;
-            if (details.hasKar || details.path.includes(".kar")) yeah += " (Karaoke)"; // Defining hasKar for .kar files is no longer required
-            yeah += `</a>\n<br>`;
-            if (index + 1 !== Object.keys(jsonPath).length) yeah += `\n`; // Make sure we don't newline at the end
-        }
+    theShit.forEach((details, index) => {
+        yeah += `<a href="static/audio/${format}/${details.path}">${details.title}`;
+        if (details.hasKar || details.path.includes(".kar")) yeah += " (Karaoke)"; // Defining hasKar for .kar files is no longer required
+        yeah += "</a>";
+        if (index + 1 !== Object.keys(theShit).length) yeah += `\n<br>`; // Make sure we don't newline/line break at the end
     });
     return (yeah);
 }
