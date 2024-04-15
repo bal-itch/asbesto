@@ -27,9 +27,11 @@ function doMusicTmpl(format) {
     let yeah = "";
     // this is fucking terrifying but it's the only way i can think of to get this to work properly right now
     theShit.forEach((details, index) => {
-        yeah += `<a href="static/audio/${format}/${details.path}">${details.title}`;
-        if (details.hasKar || details.path.includes(".kar")) yeah += " (Karaoke)"; // Defining hasKar for .kar files is no longer required
-        yeah += "</a>";
+        yeah += `<shadow><a href="static/audio/${format}/${details.path}">${details.title}`;
+        // Defining hasKar for .kar files is no longer required
+        // TODO: Change the extensions of all karaoke midis to ".kar" so we can remove the "hasKar" field entirely
+        if (details.hasKar || details.path.includes(".kar")) yeah += " (Karaoke)";
+        yeah += "</a></shadow>";
         if (index + 1 !== Object.keys(theShit).length) yeah += `\n<br>`; // Make sure we don't newline/line break at the end
     });
     return (yeah);

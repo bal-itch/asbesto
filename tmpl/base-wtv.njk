@@ -18,7 +18,11 @@
     {%- block header %}{% endblock %}
     <hr>						
     {%- block content %}{% endblock %}
-    {%- include "footer.njk" %}
+    <hr>
+    <footer>
+        <img width=88 height=31 src=/static/img/button/webtoptimized.gif
+        {% include "footer.njk" %}
+    </footer>
 </center>
 </body>
 </html>
