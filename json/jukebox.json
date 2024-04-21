@@ -25,7 +25,7 @@
         },
         {
             "path": "ABBA%20-%20Thank%20You%20For%20The%20Music.kar",
-            "title": "ABBA - Thank You For The Music"
+            "title": "ABBA - Thank You for the Music"
         },
         {
             "path": "winner.mid",
@@ -48,11 +48,11 @@
         },
         {
             "path": "ACDCForThoseAboutToRock.mid",
-            "title": "AC/DC - For Those About To Rock"
+            "title": "AC/DC - For Those About to Rock"
         },
         {
             "path": "ACDCHighwayToHell.mid",
-            "title": "AC/DC - Highway To Hell"
+            "title": "AC/DC - Highway to Hell"
         },
         {
             "path": "YouShookMeAllNightLong.mid",
@@ -73,7 +73,7 @@
         },
         {
             "path": "man_in_the_box.mid",
-            "title": "Alice In Chains - Man In The Box"
+            "title": "Alice In Chains - Man in the Box"
         },
         {
             "path": "aicrooster.mid",
@@ -116,7 +116,7 @@
         },
         {
             "path": "We-Didnt-Start-The-Fire.mid",
-            "title": "Billy Joel - We Didn't Start The Fire"
+            "title": "Billy Joel - We Didn't Start the Fire"
         },
         {
             "path": "bilidolwhitewed.mid",
@@ -128,11 +128,11 @@
         },
         {
             "path": "turnthepage.mid",
-            "title": "Bob Seger - Turn The Page"
+            "title": "Bob Seger - Turn the Page"
         },
         {
             "path": "LivingonaPrayer.mid",
-            "title": "Bon Jovi - Livin' On A Prayer"
+            "title": "Bon Jovi - Livin' on a Prayer"
         },
         {
             "path": "BOSTON.More%20than%20a%20feeling.MID",
@@ -161,7 +161,7 @@
         },
         {
             "path": "Smoke%20On%20The%20Water.mid",
-            "title": "Deep Purple - Smoke On The Water",
+            "title": "Deep Purple - Smoke on the Water",
             "hasKar": true
         },
         {
@@ -214,6 +214,11 @@
             "hasKar": true
         },
         {
+            "path": "Jamiroquai%20-%20Cosmic%20Girl.mid",
+            "title": "Jamiroquai - Cosmic Girl",
+            "hasKar": true
+        },
+        {
             "path": "VirtualInsanity.mid",
             "title": "Jamiroquai - Virtual Insanity",
             "hasKar": true
@@ -236,7 +241,7 @@
         },
         {
             "path": "Wheel%20In%20The%20Sky%20%28Karaoke%29.mid",
-            "title": "Journey - Wheel In The Sky",
+            "title": "Journey - Wheel in the Sky",
             "hasKar": true
         },
         {
@@ -245,7 +250,7 @@
         },
         {
             "path": "kfreakonaleash.mid",
-            "title": "Korn - Freak On A Leash"
+            "title": "Korn - Freak On a Leash"
         },
         {
             "path": "Ramble%20On.mid",
@@ -257,7 +262,7 @@
         },
         {
             "path": "mdethsod.mid",
-            "title": "Megadeth - Symphony Of Destruction"
+            "title": "Megadeth - Symphony of Destruction"
         },
         {
             "path": "Down%20Under%20%28Karaoke%29.mid",
@@ -266,7 +271,7 @@
         },
         {
             "path": "mfdb.mid",
-            "title": "Metallica - Fade To Black"
+            "title": "Metallica - Fade to Black"
         },
         {
             "path": "mfuel.mid",
@@ -347,8 +352,24 @@
             "title": "Phil Collins - In the Air Tonight"
         },
         {
+            "path": "Queen_-_Another_one_bites_the_dust.mid",
+            "title": "Queen - Another One Bites the Dust",
+            "hasKar": true
+        },
+        {
+            "path": "Queen_-_Bicycle.mid",
+            "title": "Queen - Bicycle Race",
+            "hasKar": true
+        },
+        {
             "path": "Queen%20-%20Bohemian%20Rhapsody.mid",
-            "title": "Queen - Bohemian Rhapsody"
+            "title": "Queen - Bohemian Rhapsody",
+            "hasKar": true
+        },
+        {
+            "path": "Queen_-_Dont_stop_me_now.mid",
+            "title": "Queen - Don't Stop Me Now",
+            "hasKar": true
         },
         {
             "path": "rhcreep.mid",
@@ -364,7 +385,7 @@
         },
         {
             "path": "ratmkilling.mid",
-            "title": "Rage Against The Machine - Killing In The Name"
+            "title": "Rage Against The Machine - Killing in the Name"
         },
         {
             "path": "Never%20Gonna%20Give%20You%20Up%20%28Karaoke%29.mid",
@@ -418,13 +439,13 @@
             "title": "Soundgarden - Spoonman"
         },
         {
+            "path": "flylikeaneagle.mid",
+            "title": "Steve Miller Band - Fly Like an Eagle"
+        },
+        {
             "path": "Rock%20n%27%20me.mid",
             "title": "Steve Miller Band - Rock'n Me",
             "hasKar": true
-        },
-        {
-            "path": "flylikeaneagle.mid",
-            "title": "Steve Miller Band - Fly Like an Eagle"
         },
         {
             "path": "Game_System__Super_Nintendo_SimCity_VillageSequenced_by__John_Engelmann__engell69gtenet_.mid",
@@ -480,7 +501,7 @@
         },
         {
             "path": "EverybodyWantsToRuleTheWorld.mid",
-            "title": "Tears For Fears - Everybody Wants To Rule The World"
+            "title": "Tears For Fears - Everybody Wants to Rule the World"
         },
         {
             "path": "A_Hard_Days_Night.mid",
@@ -511,7 +532,7 @@
         },
         {
             "path": "Don%27t%20Stand%20So%20Close%20To%20Me%201%20%28Karaoke%29.mid",
-            "title": "The Police - Don't Stand So Close To Me",
+            "title": "The Police - Don't Stand So Close to Me",
             "hasKar": true
         },
         {
