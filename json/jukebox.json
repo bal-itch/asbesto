@@ -174,8 +174,20 @@
             "hasKar": true
         },
         {
+            "path": "e1m1.mid",
+            "title": "Doom - At Doom's Gate"
+        },
+        {
+            "path": "e1m3.mid",
+            "title": "Doom - Dark Halls"
+        },
+        {
             "path": "e1m4.mid",
             "title": "Doom - Kitchen Ace (And Taking Names)"
+        },
+        {
+            "path": "e1m2.mid",
+            "title": "Doom - The Imp's Song"
         },
         {
             "path": "MAP04.MID",
